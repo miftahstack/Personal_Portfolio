@@ -1860,6 +1860,9 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
   .w-13 {
     width: calc(var(--spacing) * 13);
   }
@@ -1955,6 +1958,9 @@
   }
   .-rotate-\[8deg\] {
     rotate: calc(8deg * -1);
+  }
+  .-rotate-\[10deg\] {
+    rotate: calc(10deg * -1);
   }
   .-rotate-\[17deg\] {
     rotate: calc(17deg * -1);
