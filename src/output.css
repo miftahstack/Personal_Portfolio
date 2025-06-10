@@ -1746,6 +1746,9 @@
   .resize {
     resize: both;
   }
+  .list-disc {
+    list-style-type: disc;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -1962,6 +1965,9 @@
   }
   .pr-70 {
     padding-right: calc(var(--spacing) * 70);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
   }
   .text-center {
     text-align: center;
