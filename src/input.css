@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre¡+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
 @theme {
     --font-Outfit: "Outfit", sans-serif;
     --font-Libre: "Libre Baskerville", serif;
+    --font-dancing: "Dancing Script", cursive;
     --color-primaryy: #fca311;
     --color-secondaryy: #dad7cd;
     --color-color3: #e5e5e5;
     --color-color4: #14213d;
     --color-color5: #0d1b2a;
 }
-
