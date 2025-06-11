@@ -8,31 +8,19 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-yellow-100: oklch(97.3% 0.071 103.193);
-    --color-yellow-200: oklch(94.5% 0.129 101.54);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-900: oklch(42.1% 0.095 57.708);
-    --color-cyan-500: oklch(71.5% 0.143 215.221);
-    --color-blue-50: oklch(97% 0.014 254.604);
-    --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
-    --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
-    --color-gray-300: oklch(87.2% 0.01 258.338);
-    --color-neutral-500: oklch(55.6% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-xs: 20rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --text-base: 1rem;
-    --text-base--line-height: calc(1.5 / 1);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-3xl: 1.875rem;
@@ -43,10 +31,6 @@
     --tracking-wide: 0.025em;
     --radius-xs: 0.125rem;
     --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
-    --radius-2xl: 1rem;
-    --radius-3xl: 1.5rem;
-    --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -57,7 +41,6 @@
     --font-dancing: "Dancing Script", cursive;
     --color-primaryy: #fca311;
     --color-secondaryy: #dad7cd;
-    --color-color3: #e5e5e5;
     --color-color4: #14213d;
     --color-color5: #0d1b2a;
   }
@@ -694,6 +677,9 @@
   .-top-14 {
     top: calc(var(--spacing) * -14);
   }
+  .-top-43 {
+    top: calc(var(--spacing) * -43);
+  }
   .-top-\[20\%\] {
     top: calc(20% * -1);
   }
@@ -711,6 +697,9 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .left-1\/2 {
+    left: calc(1/2 * 100%);
   }
   .left-\[-5\%\] {
     left: -5%;
@@ -806,6 +795,9 @@
   }
   .z-1 {
     z-index: 1;
+  }
+  .z-2 {
+    z-index: 2;
   }
   .z-10 {
     z-index: 10;
@@ -1026,6 +1018,9 @@
   .w-\[300px\] {
     width: 300px;
   }
+  .w-\[800px\] {
+    width: 800px;
+  }
   .w-full {
     width: 100%;
   }
@@ -1044,6 +1039,10 @@
   }
   .-translate-x-\[50\%\] {
     --tw-translate-x: calc(50% * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .scale-0 {
@@ -1183,6 +1182,9 @@
   .bg-primaryy {
     background-color: var(--color-primaryy);
   }
+  .bg-secondaryy {
+    background-color: var(--color-secondaryy);
+  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -1214,6 +1216,20 @@
     --tw-gradient-to: var(--color-yellow-900);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .mask-t-from-50\% {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-linear: var(--tw-mask-left), var(--tw-mask-right), var(--tw-mask-bottom), var(--tw-mask-top);
+    --tw-mask-top: linear-gradient(to top, var(--tw-mask-top-from-color) var(--tw-mask-top-from-position), var(--tw-mask-top-to-color) var(--tw-mask-top-to-position));
+    --tw-mask-top-from-position: 50%;
+  }
+  .mask-t-from-60\% {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-linear: var(--tw-mask-left), var(--tw-mask-right), var(--tw-mask-bottom), var(--tw-mask-top);
+    --tw-mask-top: linear-gradient(to top, var(--tw-mask-top-from-color) var(--tw-mask-top-from-position), var(--tw-mask-top-to-color) var(--tw-mask-top-to-position));
+    --tw-mask-top-from-position: 60%;
+  }
   .mask-b-from-50\% {
     mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
     mask-composite: intersect;
@@ -1221,11 +1237,54 @@
     --tw-mask-bottom: linear-gradient(to bottom, var(--tw-mask-bottom-from-color) var(--tw-mask-bottom-from-position), var(--tw-mask-bottom-to-color) var(--tw-mask-bottom-to-position));
     --tw-mask-bottom-from-position: 50%;
   }
+  .mask-b-from-60\% {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-linear: var(--tw-mask-left), var(--tw-mask-right), var(--tw-mask-bottom), var(--tw-mask-top);
+    --tw-mask-bottom: linear-gradient(to bottom, var(--tw-mask-bottom-from-color) var(--tw-mask-bottom-from-position), var(--tw-mask-bottom-to-color) var(--tw-mask-bottom-to-position));
+    --tw-mask-bottom-from-position: 60%;
+  }
+  .mask-radial-\[30\%_90\%\] {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-radial: radial-gradient(var(--tw-mask-radial-stops, var(--tw-mask-radial-size)));
+    --tw-mask-radial-size: 30% 90%;
+  }
   .mask-radial-\[50\%_90\%\] {
     mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
     mask-composite: intersect;
     --tw-mask-radial: radial-gradient(var(--tw-mask-radial-stops, var(--tw-mask-radial-size)));
     --tw-mask-radial-size: 50% 90%;
+  }
+  .mask-radial-\[55\%_40\%\] {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-radial: radial-gradient(var(--tw-mask-radial-stops, var(--tw-mask-radial-size)));
+    --tw-mask-radial-size: 55% 40%;
+  }
+  .mask-radial-\[55\%_90\%\] {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-radial: radial-gradient(var(--tw-mask-radial-stops, var(--tw-mask-radial-size)));
+    --tw-mask-radial-size: 55% 90%;
+  }
+  .mask-radial-\[60\%_90\%\] {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-radial: radial-gradient(var(--tw-mask-radial-stops, var(--tw-mask-radial-size)));
+    --tw-mask-radial-size: 60% 90%;
+  }
+  .mask-radial-\[65\%_90\%\] {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-radial: radial-gradient(var(--tw-mask-radial-stops, var(--tw-mask-radial-size)));
+    --tw-mask-radial-size: 65% 90%;
+  }
+  .mask-radial-\[70\%_90\%\] {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-radial: radial-gradient(var(--tw-mask-radial-stops, var(--tw-mask-radial-size)));
+    --tw-mask-radial-size: 70% 90%;
   }
   .mask-radial-from-80\% {
     mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
@@ -1233,6 +1292,13 @@
     --tw-mask-radial-stops: var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), var(--tw-mask-radial-from-color) var(--tw-mask-radial-from-position), var(--tw-mask-radial-to-color) var(--tw-mask-radial-to-position);
     --tw-mask-radial: radial-gradient(var(--tw-mask-radial-stops));
     --tw-mask-radial-from-position: 80%;
+  }
+  .mask-radial-from-100\% {
+    mask-image: var(--tw-mask-linear), var(--tw-mask-radial), var(--tw-mask-conic);
+    mask-composite: intersect;
+    --tw-mask-radial-stops: var(--tw-mask-radial-shape) var(--tw-mask-radial-size) at var(--tw-mask-radial-position), var(--tw-mask-radial-from-color) var(--tw-mask-radial-from-position), var(--tw-mask-radial-to-color) var(--tw-mask-radial-to-position);
+    --tw-mask-radial: radial-gradient(var(--tw-mask-radial-stops));
+    --tw-mask-radial-from-position: 100%;
   }
   .fill-current {
     fill: currentcolor;
@@ -1355,6 +1421,9 @@
   .text-\[50px\] {
     font-size: 50px;
   }
+  .text-\[140px\] {
+    font-size: 140px;
+  }
   .text-\[160px\] {
     font-size: 160px;
   }
@@ -1373,6 +1442,26 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .tracking-\[5px\] {
+    --tw-tracking: 5px;
+    letter-spacing: 5px;
+  }
+  .tracking-\[10px\] {
+    --tw-tracking: 10px;
+    letter-spacing: 10px;
+  }
+  .tracking-\[15px\] {
+    --tw-tracking: 15px;
+    letter-spacing: 15px;
+  }
+  .tracking-\[30px\] {
+    --tw-tracking: 30px;
+    letter-spacing: 30px;
+  }
+  .tracking-\[px\] {
+    --tw-tracking: px;
+    letter-spacing: px;
   }
   .tracking-wide {
     --tw-tracking: var(--tracking-wide);
@@ -2036,6 +2125,26 @@
   inherits: false;
   initial-value: linear-gradient(#fff, #fff);
 }
+@property --tw-mask-top-from-position {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-mask-top-to-position {
+  syntax: "*";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-mask-top-from-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: black;
+}
+@property --tw-mask-top-to-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: transparent;
+}
 @property --tw-mask-bottom-from-position {
   syntax: "*";
   inherits: false;
@@ -2208,6 +2317,10 @@
       --tw-mask-right: linear-gradient(#fff, #fff);
       --tw-mask-bottom: linear-gradient(#fff, #fff);
       --tw-mask-top: linear-gradient(#fff, #fff);
+      --tw-mask-top-from-position: 0%;
+      --tw-mask-top-to-position: 100%;
+      --tw-mask-top-from-color: black;
+      --tw-mask-top-to-color: transparent;
       --tw-mask-bottom-from-position: 0%;
       --tw-mask-bottom-to-position: 100%;
       --tw-mask-bottom-from-color: black;
