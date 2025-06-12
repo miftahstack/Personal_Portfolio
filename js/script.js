@@ -1,10 +1,10 @@
 // CounterUp
-let counter01= document.getElementById('counter01')
-let counter02= document.getElementById('counter02')
-let counter03= document.getElementById('counter03')
-let counter04= document.getElementById('counter04')
+let counter01 = document.getElementById("counter01");
+let counter02 = document.getElementById("counter02");
+let counter03 = document.getElementById("counter03");
+let counter04 = document.getElementById("counter04");
 
-// Separate counts for each counter
+
 let count1 = 0;
 let count2 = 0;
 let count3 = 0;
@@ -57,28 +57,28 @@ function counterjs4() {
 let a = setInterval(() => {
   counterjs4();
 }, 80);
-//  CounterUp
-
+//  CounterUp++++++++++++++++++++++++++++
 
 //Back to Top
 let bactoTop = document.getElementById("bactoTop");
-window.onscroll = function() {scrollFunction()};
-
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        bactoTop.style.display = "grid";
-
-    } else {
-        bactoTop.style.display = "none";
-    }
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    bactoTop.style.display = "grid";
+  } else {
+    bactoTop.style.display = "none";
+  }
 }
 
 function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
 //Back to Top
-
-
